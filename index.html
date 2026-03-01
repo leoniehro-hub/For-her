@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You</title>
+<style>
+body {
+  margin:0;
+  background:black;
+  color:#f2f2f2;
+  font-family: 'Cormorant Garamond', serif;
+  text-align:center;
+  overflow:hidden;
+}
+
+.container {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-weight:300;
+  letter-spacing:2px;
+}
+
+.rose {
+  width:220px;
+  margin:20px 0;
+  cursor:pointer;
+  transition: transform 6s linear;
+}
+
+.rotate {
+  transform: rotate(360deg);
+}
+
+.fade {
+  opacity:0;
+  transition: opacity 4s ease;
+}
+
+.show {
+  opacity:1;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" src="love.mp3"></audio>
+
+<div class="container">
+  <h1>Before you continue...</h1>
+  <img src="rose.png" class="rose" id="rose" onclick="startExperience()">
+  <p>Press play</p>
+  <p id="ours" class="fade" style="margin-top:40px; font-size:22px;">
+    This is ours.
+  </p>
+</div>
+
+<script>
+function startExperience() {
+  document.getElementById("music").play();
+  document.getElementById("rose").classList.add("rotate");
+  setTimeout(function(){
+    document.getElementById("ours").classList.add("show");
+  }, 3000);
+}
+</script>
+
+</body>
+</html>
