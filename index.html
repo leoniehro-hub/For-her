@@ -29,11 +29,11 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
     transform-origin: center center;
-    transition: transform 5s linear;
+    transition: transform 8s ease-out;
     cursor: pointer;
 }
 .grow {
-    transform: translate(-50%, -50%) scale(2.2) rotate(25deg);
+    transform: translate(-50%, -50%) scale(2.3) rotate(360deg);
 }
 .fade {
   opacity:0;
@@ -79,7 +79,7 @@ function startExperience() {
     // Nach 14 Sekunden zur nächsten Seite
     setTimeout(function() {
         window.location.href = "page2.html";
-    }, 80000);
+    }, 55000);
 }
 </script>
 
