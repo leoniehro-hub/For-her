@@ -4,44 +4,39 @@
 <title>For You</title>
 <style>
 body {
-  margin:0;
-  background:black;
-  color:#f2f2f2;
-  font-family: 'Cormorant Garamond', serif;
-  text-align:center;
-  overflow:hidden;
+    margin:0;
+    background:black;
+    color:#f2f2f2;
+    font-family:'Cormorant Garamond', serif;
+    text-align:center;
+    overflow:hidden;
 }
 
 .container {
-    text-align: center;
-    margin-top: 20vh;
-}
-
-h1 {
-  font-weight:300;
-  letter-spacing:2px;
+    margin-top:20vh;
 }
 
 .rose {
-    position: fixed;
-    width: 40vw;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transform-origin: center center;
-    transition: transform 8s ease-out;
-    cursor: pointer;
+    position:fixed;
+    width:40vw;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%) scale(1);
+    transition:transform 8s ease-out;
+    cursor:pointer;
 }
+
 .grow {
-    transform: translate(-50%, -50%) scale(2.3) rotate(360deg);
+    transform:translate(-50%, -50%) scale(2.5);
 }
+
 .fade {
-  opacity:0;
-  transition: opacity 2s ease;
+    opacity:0;
+    transition:opacity 2s ease;
 }
 
 .show {
-  opacity:1;
+    opacity:1;
 }
 </style>
 </head>
@@ -64,29 +59,22 @@ function startExperience() {
 
     const rose = document.getElementById("rose");
 
-    // Falls grow schon drauf ist → entfernen (Reset)
-    rose.classList.remove("grow");
-
-    // Reflow erzwingen (wichtig!)
-    void rose.offsetWidth;
-
     document.getElementById("music").play();
 
     document.getElementById("ours").classList.add("show");
 
-    setTimeout(function() {
+    setTimeout(() => {
         document.getElementById("ours").classList.remove("show");
     }, 3000);
 
-    setTimeout(function() {
+    setTimeout(() => {
         rose.classList.add("grow");
     }, 5000);
 
-    setTimeout(function() {
+    setTimeout(() => {
         window.location.href = "page2.html";
     }, 55000);
 }
 </script>
-
 </body>
 </html>
