@@ -24,15 +24,20 @@ h1 {
 
 .rose {
     position: fixed;
-    top: 50%;
-    left: 50%;
     width: 40vw;
-    transform: translate(-50%, -50%);
-    transition: transform 8s cubic-bezier(0.19, 1, 0.22, 1);
+    left: 50%;
+    top: 50%;
+    margin-left: -20vw;   /* Hälfte von 40vw */
+    margin-top: -20vw;    /* Annähernd Hälfte – reicht optisch */
+    
+    transform: scale(1);
+    transform-origin: center center;
+    
+    transition: transform 10s ease-out;
     cursor: pointer;
 }
 .grow {
-    transform: translate(-50%, -50%) scale(18) rotate(540deg);
+    transform: scale(15) rotate(360deg);
 }
 .fade {
   opacity:0;
