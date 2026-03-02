@@ -26,15 +26,15 @@ body {
 }
 
 .grow {
-    animation: cinematicGrow 70s linear forwards;
+    animation: cinematicGrow 60s linear forwards;
 }
 
 @keyframes cinematicGrow {
-    0% {
+    from {
         transform: translate(-50%, -50%) scale(1) rotate(0deg);
     }
-    100% {
-        transform: translate(-50%, -50%) scale(3) rotate(90deg);
+    to {
+        transform: translate(-50%, -50%) scale(2.2) rotate(60deg);
     }
 }
 
