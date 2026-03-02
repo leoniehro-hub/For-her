@@ -32,7 +32,11 @@ h1 {
   transition: transform 5s ease-in-out;
 }
 .grow {
-  transform: scale(6) rotate(720deg);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(20) rotate(1080deg);
+  z-index: 9999;
 }
 
 .fade {
@@ -62,10 +66,19 @@ h1 {
 <script>
 function startExperience() {
   document.getElementById("music").play();
-  document.getElementById("rose").classList.add("rotate");
-  setTimeout(function(){
-    document.getElementById("ours").classList.add("show");
-  }, 3000);
+
+  // Erst Text zeigen
+  document.getElementById("ours").classList.add("show");
+
+  // 2 Sekunden warten, dann Rose wachsen lassen
+  setTimeout(function() {
+    document.getElementById("rose").classList.add("grow");
+  }, 2000);
+
+  // Danach zur nächsten Seite
+  setTimeout(function() {
+    window.location.href = "page2.html";
+  }, 8000);
 }
 </script>
 
