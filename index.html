@@ -29,11 +29,11 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
     transform-origin: center center;
-    transition: transform 18s linear;
+    transition: transform 30s linear;
     cursor: pointer;
 }
 .grow {
-    transform: translate(-50%, -50%) scale(5) rotate(150deg);
+    transform: translate(-50%, -50%) scale(2) rotate(50deg);
 }
 .fade {
   opacity:0;
@@ -74,12 +74,12 @@ function startExperience() {
     // Nach 4 Sekunden Rose wachsen lassen
     setTimeout(function() {
         document.getElementById("rose").classList.add("grow");
-    }, 4000);
+    }, 6000);
 
     // Nach 14 Sekunden zur nächsten Seite
     setTimeout(function() {
         window.location.href = "page2.html";
-    }, 14000);
+    }, 31000);
 }
 </script>
 
