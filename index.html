@@ -61,22 +61,27 @@ h1 {
 
 <script>
 function startExperience() {
+
+    const rose = document.getElementById("rose");
+
+    // Falls grow schon drauf ist → entfernen (Reset)
+    rose.classList.remove("grow");
+
+    // Reflow erzwingen (wichtig!)
+    void rose.offsetWidth;
+
     document.getElementById("music").play();
 
-    // Text sofort einblenden
     document.getElementById("ours").classList.add("show");
 
-    // Nach 3 Sekunden Text wieder ausblenden
     setTimeout(function() {
         document.getElementById("ours").classList.remove("show");
     }, 3000);
 
-    // Nach 4 Sekunden Rose wachsen lassen
     setTimeout(function() {
-        document.getElementById("rose").classList.add("grow");
+        rose.classList.add("grow");
     }, 5000);
 
-    // Nach 14 Sekunden zur nächsten Seite
     setTimeout(function() {
         window.location.href = "page2.html";
     }, 55000);
