@@ -27,17 +27,13 @@ h1 {
     width: 40vw;
     left: 50%;
     top: 50%;
-    margin-left: -20vw;   /* Hälfte von 40vw */
-    margin-top: -20vw;    /* Annähernd Hälfte – reicht optisch */
-    
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
     transform-origin: center center;
-    
     transition: transform 10s ease-out;
     cursor: pointer;
 }
 .grow {
-    transform: scale(15) rotate(360deg);
+    transform: translate(-50%, -50%) scale(15) rotate(360deg);
 }
 .fade {
   opacity:0;
