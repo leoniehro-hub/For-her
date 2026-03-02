@@ -26,23 +26,17 @@ body {
 }
 
 .grow {
-    animation: cinematicGrow 40s cubic-bezier(0.05, 0.8, 0.1, 1) forwards;
+    animation: cinematicGrow 70s linear forwards;
 }
 
 @keyframes cinematicGrow {
     0% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    40% {
-        transform: translate(-50%, -50%) scale(2);
-    }
-    70% {
-        transform: translate(-50%, -50%) scale(3);
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
     }
     100% {
-        transform: translate(-50%, -50%) scale(5);
+        transform: translate(-50%, -50%) scale(3) rotate(90deg);
     }
-
+}
 
 .fade {
     opacity:0;
@@ -87,7 +81,7 @@ function startExperience() {
 
     setTimeout(() => {
         window.location.href = "page2.html";
-    }, 55000);
+    }, 50000);
 }
 </script>
 </body>
