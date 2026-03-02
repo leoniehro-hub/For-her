@@ -26,7 +26,7 @@ body {
 }
 
 .grow {
-    animation: cinematicGrow 36s linear forwards;
+    animation: cinematicGrow 31s linear forwards;
 }
 
 @keyframes cinematicGrow {
@@ -65,9 +65,10 @@ body {
 <script>
 function startExperience() {
 
+    const music = document.getElementById("music");
     const rose = document.getElementById("rose");
 
-    document.getElementById("music").play();
+    music.play();
 
     document.getElementById("ours").classList.add("show");
 
@@ -79,9 +80,16 @@ function startExperience() {
         rose.classList.add("grow");
     }, 5000);
 
-    setTimeout(() => {
-        window.location.href = "page2.html";
-    }, 55000);
+    // 🎵 Hier kommt die Magie:
+    music.addEventListener("timeupdate", function () {
+
+        // HIER die Sekunden eintragen,
+        // bei denen du springen willst
+        if (music.currentTime >= 52) { 
+            window.location.href = "page2.html";
+        }
+
+    });
 }
 </script>
 </body>
